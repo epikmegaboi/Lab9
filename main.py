@@ -10,7 +10,13 @@ def encode_password(password):
     return output
 
 def decode_password(output):
-    pass
+    decoded_password = ""
+    for char in encoded_password:
+        decoded_char = int(char) - 3
+        if decoded_char < 0:
+            decoded_char += 10
+        decoded_password += str(decoded_char)
+    return decoded_password
 
 def main():
     menu_options = ["Encode", "Decode", "Quit"]
