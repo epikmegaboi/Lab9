@@ -11,7 +11,7 @@ def encode_password(password):
 
 def decode_password(output):
     decoded_password = ""
-    for char in encoded_password:
+    for char in output:
         decoded_char = int(char) - 3
         if decoded_char < 0:
             decoded_char += 10
